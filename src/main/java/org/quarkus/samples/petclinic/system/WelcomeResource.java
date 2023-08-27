@@ -1,5 +1,6 @@
 package org.quarkus.samples.petclinic.system;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -15,6 +16,7 @@ public class WelcomeResource {
     TemplatesLocale templates;
 
     @GET
+    @RolesAllowed("admin")
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance get() {
         return templates.welcome();

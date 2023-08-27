@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.validation.ConstraintViolation;
@@ -32,6 +33,7 @@ public class PetResource {
     Validator validator;
 
     @GET
+    @RolesAllowed("admin")
     @Path("{ownerId}/pets/new")
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance createTemplate(@PathParam("ownerId") Long ownerId) {
@@ -39,6 +41,7 @@ public class PetResource {
     }
 
     @GET
+    @RolesAllowed("admin")
     @Path("{ownerId}/pets/{petId}/edit")
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance editTemplate(@PathParam("ownerId") Long ownerId, @PathParam("petId") Long petId) {
@@ -46,6 +49,7 @@ public class PetResource {
     }
 
     @POST
+    @RolesAllowed("admin")
     @Path("{ownerId}/pets/new")
     @Produces(MediaType.TEXT_HTML)
     @Transactional
@@ -77,6 +81,7 @@ public class PetResource {
     }
 
     @POST
+    @RolesAllowed("admin")
     @Path("{ownerId}/pets/{petId}/edit")
     @Produces(MediaType.TEXT_HTML)
     @Transactional

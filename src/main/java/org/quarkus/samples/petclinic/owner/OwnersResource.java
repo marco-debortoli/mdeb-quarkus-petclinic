@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.validation.ConstraintViolation;
@@ -35,6 +36,7 @@ public class OwnersResource {
     Validator validator;
 
     @GET
+    @RolesAllowed("admin")
     @Path("/find")
     @Produces(MediaType.TEXT_HTML)
     /**
@@ -47,7 +49,8 @@ public class OwnersResource {
     }
 
     @GET
-    @Path("new")
+    @RolesAllowed("admin") 
+    @Path("new")   
     @Produces(MediaType.TEXT_HTML)
     /**
      * Renders the createOrUpdateOwnerForm.html
@@ -59,6 +62,7 @@ public class OwnersResource {
     }
 
     @GET
+    @RolesAllowed("admin") 
     @Path("{ownerId}/edit")
     @Produces(MediaType.TEXT_HTML)
     /**
@@ -71,6 +75,7 @@ public class OwnersResource {
     }
 
     @GET
+    @RolesAllowed("admin") 
     @Path("{ownerId}")
     @Produces(MediaType.TEXT_HTML)
     /**
@@ -83,6 +88,7 @@ public class OwnersResource {
     }
 
     @POST
+    @RolesAllowed("admin") 
     @Path("new")
     @Produces(MediaType.TEXT_HTML)
     @Transactional
@@ -109,6 +115,7 @@ public class OwnersResource {
     }
     
     @POST
+    @RolesAllowed("admin") 
     @Path("{ownerId}/edit")
     @Transactional
     @Produces(MediaType.TEXT_HTML)
@@ -135,6 +142,7 @@ public class OwnersResource {
     }
 
     @GET
+    @RolesAllowed("admin") 
     @Produces(MediaType.TEXT_HTML)
     /**
      * Process the findOwners form
