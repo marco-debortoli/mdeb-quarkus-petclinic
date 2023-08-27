@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.validation.ConstraintViolation;
@@ -31,6 +32,7 @@ public class VisitResource {
     Validator validator;
 
     @GET
+    @RolesAllowed("admin")
     @Path("{ownerId}/pets/{petId}/visits/new")
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance createTemplate(@PathParam("petId") Long petId) {
@@ -38,6 +40,7 @@ public class VisitResource {
     }
 
     @POST
+    @RolesAllowed("admin")
     @Path("{ownerId}/pets/{petId}/visits/new")
     @Produces(MediaType.TEXT_HTML)
     @Transactional

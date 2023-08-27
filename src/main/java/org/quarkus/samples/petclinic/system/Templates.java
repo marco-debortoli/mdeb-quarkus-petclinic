@@ -17,6 +17,8 @@ import io.quarkus.qute.TemplateInstance;
 public class Templates {
     public static native TemplateInstance welcome();
 
+    public static native TemplateInstance login(Boolean error);
+
     public static native TemplateInstance error(String message);
 
     public static native TemplateInstance vetList(List<Vet> vets);
