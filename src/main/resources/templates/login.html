@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PetClinic :: a Quarkus Framework demonstration</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/webjars/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/petclinic.css" />
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"><span></span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="auth">
+    <div class="container xd-container">
+      <h2>Log In to PetClinic</h2>
+      <form class="form-horizontal" action="j_security_check" method="post">
+        <div class="form-group">
+          <label for="j_username">Email address</label>
+          <input type="email" class="form-control" name="j_username" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="j_password">Password</label>
+          <input type="password" class="form-control" name="j_password" placeholder="Password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Log In</button>
+
+        <br>
+
+        {#if error}
+        <small class="error">Invalid username or password. Please try again.</small>
+        {/if}
+
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
