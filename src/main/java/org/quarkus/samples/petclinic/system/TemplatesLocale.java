@@ -22,6 +22,10 @@ public class TemplatesLocale {
         return Templates.welcome().setAttribute("locale", getConfiguredLocale());
     }
 
+    public TemplateInstance login(Boolean error) {
+        return Templates.login(error).setAttribute("locale", getConfiguredLocale());
+    }
+
     public TemplateInstance error(String message) {
         return Templates.error(message).setAttribute("locale", getConfiguredLocale());
     }
