@@ -121,4 +121,8 @@ public interface SpanishAppMessages extends AppMessages {
     @Message("Visitas Anteriores")
     String previous_visits();
 
+    @Override
+    @Message("Cerrar Sesi\u00F3n")
+    String logout();
+
 }
