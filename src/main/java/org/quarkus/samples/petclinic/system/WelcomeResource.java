@@ -1,7 +1,5 @@
 package org.quarkus.samples.petclinic.system;
 
-import java.util.Locale;
-
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

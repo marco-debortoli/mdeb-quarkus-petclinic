@@ -1,6 +1,5 @@
 package org.quarkus.samples.petclinic.vet;
 
-import org.quarkus.samples.petclinic.system.Templates;
 import org.quarkus.samples.petclinic.system.TemplatesLocale;
 
 import io.quarkus.qute.TemplateInstance;
