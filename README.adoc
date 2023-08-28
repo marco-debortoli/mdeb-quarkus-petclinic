@@ -1,9 +1,6 @@
 = Quarkus Petclinic project
 
-This is a clone of the https://github.com/redhat-developer-demos/quarkus-petclinic repository with a small change that adds:
-- User class
-- users database table
-- Email authentication using Quarkus form-based authentication
+This is a clone of the https://github.com/redhat-developer-demos/quarkus-petclinic repository with a small change that adds user management and email authentication.
 
 == Running Instructions
 
