@@ -1,0 +1,10 @@
+.auth .container {
+  max-width: 500px; }
+
+.auth .form-group {
+  margin-top: 10px; }
+
+.auth .error {
+  color: #d0312d; }
+
+/*# sourceMappingURL=../../../../../../target/auth.css.map */
