@@ -1,15 +1,22 @@
 = Quarkus Petclinic project
 
-== Run Locally
+This is a clone of the https://github.com/redhat-developer-demos/quarkus-petclinic repository with a small change that adds:
+- User class
+- users database table
+- Email authentication using Quarkus form-based authentication
 
-=== Create css
+== Running Instructions
+
+=== Run Locally
+
+==== Create css
 
 [source, bash]
 ----
 ./mvnw compile -Pcss
 ----
 
-=== Dev mode
+==== Dev mode
 
 [source, bash]
 ----
@@ -32,20 +39,11 @@ Start the application:
 java -Dquarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/petclinic -Dquarkus.datasource.username=petclinic -Dquarkus.datasource.password=petclinic -jar target/quarkus-app/quarkus-run.jar
 ----
 
-== Kubernetes
+=== Kubernetes
 
 [source, bash]
 ----
 ./db.sh
 
 ./petclinic.sh
-----
-
-== Create a new Container
-
-Need to have an account to quay.io with writting permissions to rhdevelopers org.
-
-[source, bash]
-----
-./mvnw package -DskipTests -Dquarkus.container-image.push=true
 ----
