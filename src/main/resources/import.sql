@@ -52,5 +52,5 @@ INSERT INTO visits(id, pet_id, visit_date, description) VALUES (1002, 1008, '201
 INSERT INTO visits(id, pet_id, visit_date, description) VALUES (1003, 1008, '2013-01-03', 'neutered');
 INSERT INTO visits(id, pet_id, visit_date, description) VALUES (1004, 1007, '2013-01-04', 'spayed');
 
-INSERT INTO users(id, first_name, last_name, username, password, role) VALUES (1001, 'Admin', 'Alpha', 'admin_a@example.com', '$2a$10$5.TZHWfkAbsFoTZcuJR3KeloO/oay40F2IOiVnOMH5euAst7aPfNm', 'admin');
-INSERT INTO users(id, first_name, last_name, username, password, role) VALUES (1002, 'Admin', 'Bravo', 'admin_b@example.com', '$2a$10$5.TZHWfkAbsFoTZcuJR3KeloO/oay40F2IOiVnOMH5euAst7aPfNm', 'admin');
+INSERT INTO users(id, first_name, last_name, username, password, role) VALUES (1001, 'Admin', 'Alpha', 'admin_a@example.com', '$2a$10$zciE/QWn7vC.BABO8yi8j.cMNpbVMj0Ub1mga0kt50v33wNFNdJc.', 'admin');
+INSERT INTO users(id, first_name, last_name, username, password, role) VALUES (1002, 'Admin', 'Bravo', 'admin_b@example.com', '$2a$10$zciE/QWn7vC.BABO8yi8j.cMNpbVMj0Ub1mga0kt50v33wNFNdJc.', 'admin');

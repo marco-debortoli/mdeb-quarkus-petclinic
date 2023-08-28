@@ -85,7 +85,11 @@
 
   <script type="application/javascript">
     function logout() {
-      document.cookie = 'quarkus-credential=; Max-Age=0; path=/; domain=' + location.hostname;
+      document.cookie.split(";").forEach(
+        function(c) {
+          document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+        }
+      );
       window.location.href = "/login.html";
     }
   </script>
